@@ -70,3 +70,31 @@
         height: 100px;
     }
 }
+.whatsapp-float {
+    position: fixed; 
+    width: 50px;
+    height: 50px;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25D366;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+    z-index: 1000; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.whatsapp-float:hover {
+    background-color: #128C7E;
+    transform: translateY(-2px); 
+    box-shadow: 2px 5px 8px rgba(0,0,0,0.5);
+}
+
+.whatsapp-float i {
+    color: #FFF;
+    font-size: 1.7em;
+    line-height: 1; 
+}
