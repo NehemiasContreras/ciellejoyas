@@ -1,0 +1,112 @@
+/* --- Estilos de la Sección de Productos Destacados --- */
+.featured-products {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.featured-products h3 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #051F34; /* Color de Título Principal */
+}
+
+/* 1. CONFIGURACIÓN DE LA REJILLA (PC: 4 columnas) */
+.product-grid {
+    display: grid;
+    /* Crea tantas columnas como quepan, con un mínimo de 250px de ancho */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 30px;
+}
+
+/* 2. ESTILO DE LA TARJETA (#ffffff) */
+.product-card {
+    background-color: #ffffff; /* Color de fondo solicitado */
+    border: 1px solid #eee;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.product-card img {
+    width: 100%;
+    /* Altura fija para que todas las imágenes se vean uniformes */
+    height: 220px; 
+    object-fit: cover; /* Recorta la imagen para que llene el espacio */
+    margin-bottom: 10px;
+    border-radius: 3px;
+}
+
+/* 3. ESTILO DEL TÍTULO (#333) */
+.product-card h4 {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    color: #333; /* Color solicitado */
+    height: 30px; 
+    overflow: hidden;
+    line-height: 1.3;
+}
+
+/* 4. ESTILO DEL PRECIO (#333) */
+.price {
+    font-size: 1.1em;
+    color: #333; /* Color solicitado */
+    font-weight: bold;
+    margin-bottom: 0px; /* Elimina margen inferior extra */
+    padding-bottom: 5px;
+}
+
+
+/* --- ADAPTACIÓN PARA MÓVILES (Celular: 2 o 1 columna) --- */
+@media (max-width: 768px) {
+    
+    /* Adaptamos la rejilla para que intente mostrar 2 tarjetas por fila */
+    .product-grid {
+        /* Mínimo 150px de ancho por columna: permite 2 por fila en muchos móviles */
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+        gap: 15px; 
+    }
+    
+    /* Hacemos la imagen más compacta para la pantalla vertical del móvil */
+    .product-card img {
+        height: 150px; 
+    }
+}
+.whatsapp-float {
+    position: fixed; 
+    width: 50px;
+    height: 50px;
+    bottom: 30px;
+    right: 30px;
+    
+    background-color: #25D366;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+    z-index: 1000; 
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.whatsapp-float:hover {
+    background-color: #128C7E;
+    transform: translateY(-2px); 
+    box-shadow: 2px 5px 8px rgba(0,0,0,0.5);
+}
+
+.whatsapp-float i {
+    color: #FFF;
+    font-size:  1.7em;
+    line-height: 1; 
+}
